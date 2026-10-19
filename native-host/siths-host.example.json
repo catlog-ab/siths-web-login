@@ -1,0 +1,11 @@
+{
+  "hostName": "org.example.siths",
+  "displayName": "Exempel SITHS-inloggning",
+  "allowedExtensionIds": [
+    "dgfnlehhckaoeoiaipbbaibicbheadia"
+  ],
+  "storeExtensions": {
+    "chrome": null,
+    "edge": null
+  }
+}

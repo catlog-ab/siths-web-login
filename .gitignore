@@ -1,0 +1,22 @@
+# Byggresultat
+native-host/bin/
+dist/
+
+# Serverns hemligheter och lokala certifikat
+example-server-php/config.php
+example-server-php/certs/*.pem
+example-server-php/*.sqlite
+
+# Organisationers egna deployment-filer hålls utanför det publika repot;
+# endast mallen checkas in.
+deployments/*.json
+!deployments/example.json
+
+# Lokala filer som inte hör till projektet (t.ex. kundloggor)
+local/
+*.png
+!extension/icons/*.png
+!docs/store/*.png
+
+# Paket och arkiv byggs från källkoden
+*.zip

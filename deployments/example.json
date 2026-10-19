@@ -1,0 +1,33 @@
+{
+  "$comment": "Mall för en organisation. Kopiera till deployments/<namn>.json och kör tools/package.ps1 -Deployment deployments/<namn>.json",
+
+  "displayName": "Exempel SITHS-inloggning",
+  "hostName": "org.example.siths",
+
+  "extension": {
+    "name": "Exempel SITHS",
+    "version": "1.0.0",
+    "ids": ["dgfnlehhckaoeoiaipbbaibicbheadia"],
+    "key": null,
+    "store": {
+      "$comment": "Id i Chrome Web Store / Edge Add-ons. När de är satta föreslår kortprogrammet tillägget i webbläsaren vid installation.",
+      "chrome": null,
+      "edge": null
+    }
+  },
+
+  "sites": {
+    "matchPatterns": ["https://*.example.org/*"],
+    "originPattern": "^https://[a-z0-9-]+\\.example\\.org$"
+  },
+
+  "api": {
+    "base": "/api/siths/",
+    "suffix": ".php"
+  },
+
+  "$comment_downloadUrl": "Var användarna hämtar zip-filen med kortprogrammet; visas i popupen när det saknas. En sökväg som börjar med / gäller den sajt användaren senast var på.",
+  "downloadUrl": "/download/SithsWebLogin.zip",
+
+  "heartbeatSeconds": 30
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 0; padding: 14px 16px; width: 260px; color: #1f2328; }
+  #brand { text-align: center; margin: 0 0 12px; padding-bottom: 12px; border-bottom: 1px solid #d0d7de; }
+  #brand img { display: block; max-width: 180px; max-height: 70px; margin: 0 auto; }
+  #brand .name { font-weight: 600; font-size: 15px; }
+  h1 { font-size: 13px; font-weight: 600; color: #57606a; margin: 0 0 10px; }
+  #status { display: flex; gap: 8px; align-items: center; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #8c959f; flex: none; }
+  .ok .dot { background: #1a7f37; } .bad .dot { background: #b42318; }
+  #detail { color: #57606a; margin-top: 6px; font-size: 12px; word-break: break-word; }
+  button { margin-top: 12px; padding: 6px 10px; }
+  #download { display: block; margin-top: 10px; color: #0969da; }
+  #download[hidden] { display: none; }
+  #incognito { margin: 14px 0 0; padding-top: 10px; border-top: 1px solid #d0d7de; font-size: 12px; color: #57606a; }
+  #incognito[hidden] { display: none; }
+</style>
+</head>
+<body>
+  <div id="brand" hidden><img id="logo" alt="" hidden><div class="name" id="brandName" hidden></div></div>
+  <h1>SITHS-inloggning</h1>
+  <div id="status"><span class="dot"></span><span id="text">Kontrollerar…</span></div>
+  <div id="detail"></div>
+  <a id="download" target="_blank" rel="noopener" hidden>Ladda ned kortprogrammet</a>
+  <button id="retry" hidden>Försök igen</button>
+  <p id="incognito" hidden>För inloggning i inkognitofönster: öppna <b>chrome://extensions</b> → <b>Information</b> under detta tillägg → slå på <b>Tillåt i inkognitoläge</b> (i Edge: <b>Tillåt i InPrivate</b>).</p>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

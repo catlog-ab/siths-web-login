@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "SITHS Web Login (utveckling)",
+  "description": "Loggar in när SITHS-kortet sitter i läsaren och loggar ut när det tas ur.",
+  "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArrDtdPAH7Ej/Ej7Z1EbZmedrAHez2E2UYw2s39kp5GV4a14bmPSumEL/vy5rJTsTg1NlPcYnQ45hVEvXEfvxRxMYfYQupCF390BA4vXTPC/D5DhH+uPEgnNgF25jsV3WqrTfwkJqujxoGMZNKLq3xc5GcMUQkkiS+pQz48NVlhmhq1ixF3c+9u5fwSBgtRTcFc1YHM0CclGvnyCYVqGFPOz0/2FGYORHV1708O+tEN0HPX/3ULKqT/qBBQj1bqWXZvlWmyl9+4eW5jotnFlYIqmPmwLNR0kWYdl9ufsA6NQL7NIYPTEgcdBrLcfE9F5quyUsHZ5iFlpoHYlo1rd46QIDAQAB",
+  "permissions": ["nativeMessaging", "alarms", "storage"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8080/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "SITHS Web Login" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}
