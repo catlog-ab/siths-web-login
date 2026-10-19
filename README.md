@@ -115,7 +115,7 @@ Only `SithsWebLogin.exe` built by this repository's [GitHub Actions workflow](.g
 
 **Team roles**
 - Committers and reviewers: [members of catlog-ab](https://github.com/orgs/catlog-ab/people)
-- Approvers: [Tomas Wallentinus](https://github.com/catlog-ab) (Catlog AB)
+- Approvers: [Tomas Wallentinus](https://github.com/tomaswallentinus) (Catlog AB)
 
 **Privacy policy:** SithsWebLogin.exe and the browser extension do not transfer any information to other networked systems unless specifically requested by the user. The only data sent is the card certificate (name and HSA-id) and a signature, to the website the user signs in to (configured by the organization that deploys the software), when the user inserts the card and enters the PIN. The program changes only per-user settings (registry entries under `HKEY_CURRENT_USER` for browser integration), shows a confirmation when installed, and can be fully uninstalled via *Settings → Apps* or `SithsWebLogin.exe --uninstall`.
 
